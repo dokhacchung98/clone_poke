@@ -34,7 +34,7 @@ public class main {
                             if (e.getElementsByTag("h2").size() > 0) {
                                 pokeModel.name = e.getElementsByTag("h2").first().text();
                             }
-                            Elements ty = e.getElementsByTag("pokemon-tooltip");
+                            Elements ty = e.getElementsByClass("pokemon-tooltip");
                             for (Element t : ty) {
                                 pokeModel.types.add(t.text());
                             }

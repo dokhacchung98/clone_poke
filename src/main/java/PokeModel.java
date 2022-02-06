@@ -106,13 +106,94 @@ public class PokeModel {
         power = (int) (ratio * rarity.getDame());
     }
 
+
+//    <a href="#normal" class="type POKEMON_TYPE_NORMAL pokemon-tooltip" data-type="1">Normal</a>
+//    <a href="#fighting" class="type POKEMON_TYPE_FIGHTING pokemon-tooltip" data-type="2">Fighting</a>
+//    <a href="#flying" class="type POKEMON_TYPE_FLYING pokemon-tooltip" data-type="3">Flying</a>
+//    <a href="#poison" class="type POKEMON_TYPE_POISON pokemon-tooltip" data-type="4">Poison</a>
+//    <a href="#ground" class="type POKEMON_TYPE_GROUND pokemon-tooltip" data-type="5">Ground</a>
+//    <a href="#rock" class="type POKEMON_TYPE_ROCK pokemon-tooltip" data-type="6">Rock</a>
+//    <a href="#bug" class="type POKEMON_TYPE_BUG pokemon-tooltip" data-type="7">Bug</a>
+//    <a href="#ghost" class="type POKEMON_TYPE_GHOST pokemon-tooltip" data-type="8">Ghost</a>
+//    <a href="#steel" class="type POKEMON_TYPE_STEEL pokemon-tooltip" data-type="9">Steel</a>
+//    <a href="#fire" class="type POKEMON_TYPE_FIRE pokemon-tooltip" data-type="10">Fire</a>
+//    <a href="#water" class="type POKEMON_TYPE_WATER pokemon-tooltip" data-type="11">Water</a>
+//    <a href="#grass" class="type POKEMON_TYPE_GRASS pokemon-tooltip" data-type="12">Grass</a>
+//    <a href="#electric" class="type POKEMON_TYPE_ELECTRIC pokemon-tooltip" data-type="13">Electric</a>
+//    <a href="#psychic" class="type POKEMON_TYPE_PSYCHIC pokemon-tooltip" data-type="14">Psychic</a>
+//    <a href="#ice" class="type POKEMON_TYPE_ICE pokemon-tooltip" data-type="15">Ice</a>
+//    <a href="#dragon" class="type POKEMON_TYPE_DRAGON pokemon-tooltip" data-type="16">Dragon</a>
+//    <a href="#dark" class="type POKEMON_TYPE_DARK pokemon-tooltip" data-type="17">Dark</a>
+//    <a href="#fairy" class="type POKEMON_TYPE_FAIRY pokemon-tooltip" data-type="18">Fairy</a>
+
     @Override
     public String toString() {
+        ArrayList<Integer> tmp = new ArrayList<>();
+        for (String t : types) {
+            int k = 0;
+            switch (t) {
+                case "Fire":
+                    k = 0;
+                    break;
+                case "Water":
+                    k = 1;
+                    break;
+                case "Grass":
+                    k = 2;
+                    break;
+                case "Electric":
+                    k = 3;
+                    break;
+                case "Psychic":
+                    k = 4;
+                    break;
+                case "Steel":
+                    k = 5;
+                    break;
+                case "Ice":
+                    k = 6;
+                    break;
+                case "Dragon":
+                    k = 7;
+                    break;
+                case "Dark":
+                    k = 8;
+                    break;
+                case "Fairy":
+                    k = 9;
+                    break;
+                case "Flying":
+                    k = 10;
+                    break;
+                case "Poison":
+                    k = 11;
+                    break;
+                case "Ground":
+                    k = 12;
+                    break;
+                case "Rock":
+                    k = 13;
+                    break;
+                case "Bug":
+                    k = 14;
+                    break;
+                case "Ghost":
+                    k = 15;
+                    break;
+                case "Normal":
+                    k = 16;
+                    break;
+                case "Fighting":
+                    k = 17;
+                    break;
+            }
+            tmp.add(k);
+        }
         return "{" +
                 "\"id\":" + id +
                 ", \"name\":\"" + name + '\"' +
 //                ", \"linkImg\":\"" + linkImg + '\"' +
-                ", \"types\":" + types +
+                ", \"types\":" + tmp +
                 ", \"canUpdate\":" + canUpdate +
                 ", \"nextPoke\":" + nextPoke +
                 ", \"prePoke\":" + prePoke +
